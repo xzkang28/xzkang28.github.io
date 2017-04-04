@@ -1,0 +1,51 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 如何建立用户画像 · Hexo</title><meta name="description" content="如何建立用户画像"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="Hexo"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/408930121" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/xzkang28/xzkang28.github.io" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">如何建立用户画像</h1><div class="post-info">Nov 26, 2016</div><div class="post-content"><a id="more"></a>
+<h2 id="什么是用户画像"><a href="#什么是用户画像" class="headerlink" title="什么是用户画像"></a>什么是用户画像</h2><p>用户画像是描述产品典型使用者的标签聚合，比如A用户：男，35岁，工作和家都在北京，大数据公司高层，月收入3万以上，博士生导师，喜欢网购和传奇类游戏，那么可以用下面的图来表示：</p>
+<p><img src="http://om2zpy4xm.bkt.clouddn.com/blog/20170404/174720615.jpg" alt="mark"><br>用户画像一般包括两个纬度，一个是用户基本属性，另一个是用户行为。</p>
+<p>用户基本属性是静态的，比如性别、年龄、地区、学历、职业、收入、浏览器、IE版本、系统版本等等，这一类的属性越多越用户形象就越清楚。</p>
+<p>用户行为一定程度上取决于用户的基本属性，但这个数据指标是动态的，比如使用时常、使用频率、充值金额、充值频率等，这一数据对核心指标产生直接影响。</p>
+<h2 id="用户画像的作用"><a href="#用户画像的作用" class="headerlink" title="用户画像的作用"></a>用户画像的作用</h2><p>用户画像的核心工作是为用户打标签，打标签的重要目的之一是为了让人能够理解并且方便计算机处理，如，可以做分类统计：喜欢传奇类的用户有多少？喜欢传奇类的人群中，各年龄层分布是怎样一种情况？也可以做数据挖掘工作：利用关联规则计算，喜欢网购的用户有多少喜欢传奇类游戏？利用聚类算法分析，喜欢传奇类的地区分布是怎样？</p>
+<p>大数据处理，离不开计算机的运算，标签提供了一种便捷的方式，使得计算机能够程序化处理与人相关的信息，甚至通过算法、模型能够“理解” 人。当计算机具备这样的能力后，无论是搜索引擎、推荐引擎、广告投放等各种应用领域，都将能进一步提升精准度，提高信息获取的效率。</p>
+<h2 id="如何建立用户画像"><a href="#如何建立用户画像" class="headerlink" title="如何建立用户画像"></a>如何建立用户画像</h2><p>1、获取数据</p>
+<p>获取基本属性，可以通过注册时填写的基本信息、用户访问时获取的设备信息、微博/QQ/微信这样用户授权的第三方登录信息等方式来获取，因为基本属性的值是固定的，比如性别只有男和女，所以更多的是数据清洗工作。但在某些情况下用户的基本属性很难获得时，就可以采用A/B测试的方法来判断属性值，比如现在只知道用户是男性但不知道用户的年龄，那我们可以利用抽奖活动，在奖品页面进行SDK埋点，并设置适合20~30岁和30~40岁两种不同年龄段使用的礼品，根据用户的选择来判断用户的年龄段。除此之外也可以通过问卷调查的方式来直接获取用户数据。</p>
+<p>获取用户行为，先要在所有用户执行闭环操作流程上的关键位置埋点，用户在点击时直接产生网络行为数据（登陆次数、访问时长、激活率、外部触点、社交数据）以及服务内行为数据（浏览路径、页面停留时间、访问深度、唯一页面浏览次数等等），数据再反馈到服务器，被存放于后台或者客户端，这样我们就能通过访问数据库来使用这些数据。用户行为的跟踪主要包括三个维度：场景+媒体+路径，应用到互联网中，场景主要包括访问设备、访问时段，媒体指某一时段下用户具体访问的媒体，如资讯类、视频类、游戏类、社交类等，路径指用户进入和离开某媒体的路径，可以简单理解为用户的站内与站外行为，如是通过搜索导航进入还是直接打开该APP，离开时是站内跳转到其他网页还是直接关闭。</p>
+<p>上述定量化的调研可以快速对用户建立一个精准的认识，对不同数量、不同特征的用户进行比较统计分析，在后期产品迭代改进的过程中可以将用户进行优先级排序，着重关注核心的、规模大的用户。但是，依靠数据这种偏定量的方式建立的用户画像依然是粗线条的，难以描述典型用户的生活情景、使用场景，难以挖掘用户情感倾向和行为操作背后的原因和深层次动机。因此，如果有足够精力和时间，后续可以对每类用户进行深入的访谈，将定量和定性的方法结合起来，建立的用户画像会更为精准和生动。</p>
+<p>2、数据建模</p>
+<p>给用户的行为标签赋予权重就是数据建模的一个典型方式（更深入的用户聚类算法我将在以后的文章中介绍）<br>用户的行为，我们可以用4w表示： WHO（谁）；WHEN（什么时候）；WHERE（在哪里）；WHAT（做了什么），具体分析如下：</p>
+<p><strong>WHO</strong>：定义用户，明确我们的研究对象。主要是用于做用户分类，划分用户群体。网络上的用户识别，包括但不仅限于用户注册的ID、昵称、手机号、邮箱、身份证、微信微博号等等。</p>
+<p><strong>WHEN</strong>：这里的时间包含了时间跨度和时间长度两个方面。“时间跨度”是以天为单位计算的时长，指某行为发生到现在间隔了多长时间；“时间长度”则为了标识用户在某一页面的停留时间长短。越早发生的行为标签权重越小，越近期权重越大，这就是所谓的“时间衰减因子”。</p>
+<p><strong>WHERE</strong>：就是指用户发生行为的接触点，里面包含有内容+网址。内容是指用户作用于的对象标签，比如小米手机；网址则指用户行为发生的具体地点，比如小米官方网站。权重是加在网址标签上的，比如买小米手机，在小米官网买权重计为1,，在京东买计为0.8，在淘宝买计为0.7。</p>
+<p><strong>WHAT</strong>：就是指的用户发生了怎样的行为，根据行为的深入程度添加权重。比如，用户购买了权重计为1，用户收藏了计为0.85，用户仅仅是浏览了计为0.7。<br>当上面的单个标签权重确定下来后，就可以利用标签权重公式计算总的用户标签权重：</p>
+<p>标签权重=时间衰减因子×网址权重×行为权重</p>
+<p>举个栗子：A用户今天在小米官网购买了小米手机；B用户七天前在京东浏览了小米手机。由此得出单个用户的标签权重，打上“是否忠诚”的标签。</p>
+<table>
+<thead>
+<tr>
+<th>用户</th>
+<th>时间衰减因子</th>
+<th>网址权重</th>
+<th>行为权重</th>
+<th>用户标签权重</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>今天（1）</td>
+<td>在官网（1）</td>
+<td>购买（1）</td>
+<td>1 <em> 1 </em> 1 = 1</td>
+<td>忠实米粉</td>
+</tr>
+<tr>
+<td>B</td>
+<td>七天前（0.7）</td>
+<td>在京东（0.8）</td>
+<td>浏览（0.7）</td>
+<td>0.7 <em> 0.8 </em> 0.7 = 0.39</td>
+<td>一般用户</td>
+</tr>
+</tbody>
+</table>
+<p>通过这种方式对多个用户进行数据建模，就能够更广的覆盖目标用户群，为他们都打上标签，然后按照标签分类：总权重达到0.9以上的被归为忠实用户，他们都购买了该产品。这样的一来，企业和商家就能够根据相关信息进行更加精准的营销推广、个性化推荐。</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2016/12/24/20161224-python爬虫实践/" class="prev">PREV</a><a href="/2016/10/18/20161018-《万万没想到》读书笔记/" class="next">NEXT</a></div><div class="copyright"><p>© 2017 <a href="http://yoursite.com">John Doe</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-96130216-2",'auto');ga('send','pageview');</script></body></html>
